@@ -1,0 +1,23 @@
+{
+  "name": "wix-bm-widget",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "webpack --mode=development",
+    "start": "webpack serve"
+  },
+  "keywords": [],
+  "author": "",
+  "dependencies": {
+    "wix-backoffice-sdk": "file:/Users/haimha/WebstormProjects/business-manager/business-manager-sdk-library"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^5.5.0",
+    "serve": "^12.0.0",
+    "ts-loader": "^9.3.0",
+    "typescript": "^4.6.4",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^4.9.0"
+  }
+}
