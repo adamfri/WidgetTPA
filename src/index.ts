@@ -1,12 +1,10 @@
-import {createSDK} from "wix-dashboard-sdk";
-
-const SDK = createSDK();
+import {showToast, observeState} from "wix-dashboard-sdk";
 
 function showToastButton() {
   const button = document.createElement('button');
   button.innerText = 'Show a toast';
   button.addEventListener('click', () => {
-    SDK.showToast({
+    showToast({
       message: 'Hi! This is a message from TPA outside of Wix.',
       onCloseClick: () => {
         const status = document.getElementById('status');
@@ -17,6 +15,19 @@ function showToastButton() {
   return button;
 }
 
+async function unobserveButton() {
+  const unobserve = await observeState(props => {
+    console.log('got props@@', props);
+  });
+
+
+  const button = document.createElement('button');
+  button.innerText = 'Unobserve!';
+  button.addEventListener('click', () => {
+    unobserve();
+  });
+  return button;
+}
 
 const title = () => `<h2 style='margin:0;padding:0;'>I'm a widget TPA!</h2>`;
 const text = () => {
@@ -51,3 +62,5 @@ html, body {
 <hr />
 `);
 body.appendChild(showToastButton());
+
+unobserveButton().then(btn => body.appendChild(btn));
