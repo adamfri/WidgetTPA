@@ -5,7 +5,7 @@ module.exports = {
     mode: 'development',
     entry: './src/index.ts',
     devServer: {
-        port: 55100,
+        port: 55123,
         server: 'http',
         static: {
             directory: path.resolve(__dirname, 'dist')

@@ -9,7 +9,7 @@
   "keywords": [],
   "author": "",
   "dependencies": {
-    "wix-dashboard-sdk": "file:/Users/haimha/WebstormProjects/business-manager/sdk"
+    "@wix/dashboard-sdk": "^3.3.0"
   },
   "devDependencies": {
     "html-webpack-plugin": "^5.5.0",
